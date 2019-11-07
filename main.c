@@ -3,14 +3,21 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
+void swap(int *x, int *y)
+{
+	int temp;
+	temp = *x;
+	*x = *y;
+	*y = temp;
+}
 int main(int argc, char *argv[]) {
 	
-	int i=300;
-	int *pi = &i;
-	char *pc = &i;
+	int a=3, b=5;
 	
-	printf("%i %i %i\n", i, *pi, *pc); 
+	swap(&a, &b);
 	
-	
+	printf("a = %i b = %i\n", a, b); 
+
 	return 0;
 }
+
